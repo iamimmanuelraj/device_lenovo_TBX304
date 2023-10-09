@@ -26,7 +26,6 @@
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    20
 #define BLE_VND_INCLUDED   TRUE
-#define BLUETOOTH_QTI_SW               TRUE
 // skips conn update at conn completion
 #define BTM_SCO_ENHANCED_SYNC_ENABLED  FALSE
 
