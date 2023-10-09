@@ -44,5 +44,9 @@ PRODUCT_COPY_FILES += \
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
 # Inherit from tb-common
 $(call inherit-product, device/lenovo/tb-common/tb.mk)
