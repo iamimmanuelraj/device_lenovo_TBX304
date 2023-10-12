@@ -33,6 +33,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/lenovo/TBX304/device.mk)
 
+# Inherit Car configuration
+$(call inherit-product, device/common/car/car.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_TBX304
 PRODUCT_DEVICE := TBX304
