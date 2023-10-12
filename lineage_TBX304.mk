@@ -18,6 +18,9 @@
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 1280
 
+# Inherit Car configuration
+$(call inherit-product, device/common/car/car.mk)
+
 # Inherit 64-bit configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
