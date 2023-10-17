@@ -33,13 +33,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
+# Overlay
+PRODUCT_PACKAGES += \
+    FrameworksOverlayTBX304 \
+    SettingsProviderOverlayTBX304 \
+    TelephonyOverlayTBX304 \
+    TetheringOverlayTBX304 \
+    WifiOverlayTBX304
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
-
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -47,10 +51,6 @@ PRODUCT_COPY_FILES += \
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
-
-# WiFi
-PRODUCT_PACKAGES += \
-    WifiOverlay
 
 # Inherit from tb-common
 $(call inherit-product, device/lenovo/tb-common/tb.mk)
