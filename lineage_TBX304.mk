@@ -21,6 +21,9 @@ TARGET_SCREEN_WIDTH := 1280
 # Inherit Car configuration
 $(call inherit-product-if-exists, device/common/car/car.mk)
 
+# Inherit Android GO configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
+
 # Inherit 64-bit configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
